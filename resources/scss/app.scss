@@ -1,15 +1,27 @@
 @import "~bootstrap/scss/bootstrap";
 
-main {
-    background-color: lightcoral;
+body {
+    background-color: black;
 }
 
-.gatto-img {
-    height: 200px;
+.my_img{
+    height: 100px;
+    width: 150px;
 }
 
-.gatto-bg {
-    height: 200px;
-    background-image: url('../img/gatto.webp');
-    background-size: contain;
+.my_single_img{
+    height: 300px;
+    width: 350px;
+}
+
+
+.my_container{
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 20px;
+}
+
+li{
+    list-style: none;
 }

@@ -14,7 +14,7 @@ Route::get('/', function () {
 
 // crud read
 Route::get('/', [ComicController::class, 'index'])->name('comics.index');
-// Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
+Route::get('{id}', [ComicController::class, 'show'])->name('comics.show');
 
 
 //definisce 7 rotte comando da terminale:php artisan route:list per vederle
