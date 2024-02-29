@@ -13,8 +13,8 @@ Route::get('/', function () {
 // Route::get(PERCORSO CON CUI ARRIVARE ALLA PAGINA, FUNZIONE DI CALLBACK CHE MI CREA LA RISPOSTA DA DARE ALL UTENTE)
 
 // crud read
-Route::get('/comics', [ComicController::class, 'index'])->name('Comics.index');
-Route::get('/comics/{id}', [ComicController::class, 'show'])->name('Comics.show');
+Route::get('/', [ComicController::class, 'index'])->name('comics.index');
+// Route::get('/comics/{id}', [ComicController::class, 'show'])->name('comics.show');
 
 
 //definisce 7 rotte comando da terminale:php artisan route:list per vederle

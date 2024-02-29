@@ -18,17 +18,17 @@ class ComicSeeder extends Seeder
         $comicsData =config('comics');
 
         // dd($comicsData);
-        foreach ($comicsData as $index => $singleComic) {
+        foreach ($comicsData as $index => $singleComicData) {
             $comic = new Comic();
-            $comic->title = $singleComic['title'];
-            $comic->description = $singleComic['description'];
-            $comic->src = $singleComic['thumb'];
-            $comic->price = $singleComic['price'];
-            $comic->series =$singleComic['series'];
-            $comic->sale_date =$singleComic['sale_date'];
-            $comic->type =$singleComic['type'];
-            $comic->artists =implode(",", $singleComic['artists']);
-            $comic->writers =implode(",", $singleComic['writers']);
+            $comic->title = $singleComicData['title'];
+            $comic->description = $singleComicData['description'];
+            $comic->src = $singleComicData['thumb'];
+            $comic->price = $singleComicData['price'];
+            $comic->series =$singleComicData['series'];
+            $comic->sale_date =$singleComicData['sale_date'];
+            $comic->type =$singleComicData['type'];
+            $comic->artists =implode(",", $singleComicData['artists']);
+            $comic->writers =implode(",", $singleComicData['writers']);
 
             $comic->save();
         }
