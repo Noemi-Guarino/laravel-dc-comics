@@ -41,8 +41,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="sale_date" class="form-label">Sale date <span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" id="sale-date " name="sale_date" placeholder="enter the sale date..." min="10" max="5000" required>
+                    <label for="sale_date" class="form-label">Sale date <span class="text-danger"></span></label>
+                    <input type="number" class="form-control" id="sale-date " name="sale_date" placeholder="enter the sale date..." min="10" max="5000" >
                 </div>
 
                 <div class="mb-3">
@@ -56,13 +56,13 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="artists" class="form-label">artists <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="artists" name="artists" placeholder="enter the artists..." maxlength="16" required>
+                    <label for="artists" class="form-label">artists <span class="text-danger"></span></label>
+                    <input type="text" class="form-control" id="artists" name="artists" placeholder="enter the artists..." maxlength="16" >
                 </div>
 
                 <div class="mb-3">
-                    <label for="writers" class="form-label">artists <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="writers" name="writers" placeholder="enter the writers..." maxlength="16" required>
+                    <label for="writers" class="form-label">artists <span class="text-danger"></span></label>
+                    <input type="text" class="form-control" id="writers" name="writers" placeholder="enter the writers..." maxlength="16" >
                 </div>
 
                 <div>
