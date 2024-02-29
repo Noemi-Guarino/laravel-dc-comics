@@ -16,6 +16,10 @@ Route::get('/', function () {
 Route::get('/comics', [ComicController::class, 'index'])->name('Comics.index');
 Route::get('/comics/{id}', [ComicController::class, 'show'])->name('Comics.show');
 
+
+//definisce 7 rotte comando da terminale:php artisan route:list per vederle
+Route::resource('comics',ComicController::class);
+
 // crud create
 // Route::get('/comics/create', [ComicController::class, 'create'])->name('pastas.create');
 // Route::post('/comics/add', [ComicController::class, 'store'])->name('pastas.store');
