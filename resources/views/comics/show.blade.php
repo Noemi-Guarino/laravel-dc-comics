@@ -6,7 +6,7 @@
     <div class="my_container">
         <div class="mb-4">
             <a href="{{ route('comics.index') }}" class="btn btn-primary">
-                Torna all'index dei fumetti
+                Come back
             </a>
         </div>
         <div class="card p-3">

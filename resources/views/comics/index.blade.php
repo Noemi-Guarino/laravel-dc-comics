@@ -38,7 +38,7 @@
                 <td>{{ $comic->writers }}</td>
                 <td>
                     <a href="{{ route('comics.show', ['comic' => $comic->id]) }}" class="btn btn-primary">
-                        Vedi
+                        Show
                     </a>
                 </td>
             </tr>
