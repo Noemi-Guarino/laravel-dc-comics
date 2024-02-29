@@ -20,6 +20,15 @@ class ComicController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     */
+    public function show(Comic $comic)
+    {
+        return view('comics.show',compact('comic'));
+
+    }
+
+    /**
      * Show the form for creating a new resource.
      */
     public function create()
@@ -33,16 +42,23 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+        $comicData = $request->all();
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Comic $comic)
-    {
-        return view('comics.show',compact('comic'));
+        // TODO: valido i dati, ma lo faremo in futuro
 
+        $comic = new Comic();
+        $comic->title = $comicData['title'];
+        $comic->description = $comicData['description'];
+        $comic->src = $comicData['thumb'];
+        $comic->price = $comicData['price'];
+        $comic->series =$comicData['series'];
+        $comic->sale_date =$comicData['sale_date'];
+        $comic->type =$comicData['type'];
+        $comic->artists =implode(",", $comicData['artists']);
+        $comic->writers =implode(",", $comicData['writers']);
+    $comic->save();
+
+        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
 
     /**
