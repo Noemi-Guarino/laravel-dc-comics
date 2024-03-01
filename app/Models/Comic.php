@@ -9,6 +9,7 @@ class Comic extends Model
 {
     use HasFactory;
 
+    // I campi che sono mass assignable sono: src, title, type...
     protected $fillable = [
         'title',
         'description',

@@ -18,7 +18,8 @@
                 <th scope="col">artists</th>
                 <th scope="col">writers</th>
                 <th scope="col">comic</th>
-                <th scope="col">- </th>
+                <th scope="col"></th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -47,6 +48,14 @@
                         Edit
                     </a>
                 </td>
+                <td>
+                    <form class="d-inline-block" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"  method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button  type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+
             </tr>
             @endforeach
         </tbody>
