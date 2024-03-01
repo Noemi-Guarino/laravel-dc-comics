@@ -75,9 +75,26 @@ class ComicController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comic $comic)
     {
-        //
+        $newcomicData = $request->all();
+        $comic->update($newcomicData);
+
+
+        // $comic->title = $newcomicData['title'];
+        // $comic->description = $newcomicData['description'];
+        // $comic->src = $newcomicData['thumb'];
+        // $comic->price = $newcomicData['price'];
+        // $comic->series =$newcomicData['series'];
+        // $comic->sale_date =$newcomicData['sale_date'];
+        // $comic->type =$newcomicData['type'];
+        // $explodeArtists= explode(',',$newcomicData['artists']);
+        // $comic->artists = json_encode($explodeArtists);
+        // $comic->writers =str_replace(",",'|', $newcomicData['writers']);
+        // $comic->save();
+
+        return redirect()->route('comics.index', ['comic' => $comic->id]);
+
     }
 
     /**

@@ -46,8 +46,8 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="type" class="form-label">Type <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="type" name="type" placeholder="enter the type..." maxlength="16" required>
+                    <label for="type" class="form-label">Type <span class="text-danger"></span></label>
+                    <input type="text" class="form-control" id="type" name="type" placeholder="enter the type..." maxlength="16" >
                 </div>
 
                 <div class="mb-3">
