@@ -43,21 +43,22 @@ class ComicController extends Controller
     public function store(Request $request)
     {
         $newcomicData = $request->all();
+        $comic = Comic::create($newcomicData);
 
         // TODO: valido i dati, ma lo faremo in futuro
 
-        $comic = new Comic();
-        $comic->title = $newcomicData['title'];
-        $comic->description = $newcomicData['description'];
-        $comic->src = $newcomicData['thumb'];
-        $comic->price = $newcomicData['price'];
-        $comic->series =$newcomicData['series'];
-        $comic->sale_date =$newcomicData['sale_date'];
-        $comic->type =$newcomicData['type'];
-        $explodeArtists= explode(',',$newcomicData['artists']);
-        $comic->artists = json_encode($explodeArtists);
-        $comic->writers =str_replace(",",'|', $newcomicData['writers']);
-        $comic->save();
+        // $comic = new Comic();
+        // $comic->title = $newcomicData['title'];
+        // $comic->description = $newcomicData['description'];
+        // $comic->src = $newcomicData['thumb'];
+        // $comic->price = $newcomicData['price'];
+        // $comic->series =$newcomicData['series'];
+        // $comic->sale_date =$newcomicData['sale_date'];
+        // $comic->type =$newcomicData['type'];
+        // $explodeArtists= explode(',',$newcomicData['artists']);
+        // $comic->artists = json_encode($explodeArtists);
+        // $comic->writers =str_replace(",",'|', $newcomicData['writers']);
+        // $comic->save();
 
         return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
