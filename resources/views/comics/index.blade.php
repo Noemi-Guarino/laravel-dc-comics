@@ -49,7 +49,9 @@
                     </a>
                 </td>
                 <td>
-                    <form class="d-inline-block" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"  method="POST">
+                    <form 
+                    onsubmit="return confirm('Are you sure you want to delete this comic?');"
+                    class="d-inline-block" action="{{ route('comics.destroy', ['comic' => $comic->id]) }}"  method="POST">
                         @csrf
                         @method('DELETE')
                         <button  type="submit" class="btn btn-danger">Delete</button>
