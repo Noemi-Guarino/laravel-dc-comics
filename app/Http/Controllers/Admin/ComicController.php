@@ -44,13 +44,13 @@ class ComicController extends Controller
     {
 
         $validationResult = $request->validate([
-            'title' => 'required|max:64|min:1',
+            'title' => 'required|max:64',
             'description' => 'required|max:1000',
             'src' => 'nullable|url',
-            'price' => 'required|numeric|max=5000|min=10',
-            'series' => 'nullable|numeric|max=20|min=1',
-            'sale_date' => 'nullable|numeric|max=5000|min=10',
-            'type' => 'nullable|max=16|min:1',
+            'price' => 'required|numeric|max:5000',
+            'series' => 'nullable|numeric|max:20|min:1',
+            'sale_date' => 'nullable|numeric|max:5000|min:10',
+            'type' => 'nullable|max:16|min:1',
             'artists' => 'nullable',
             'writers' => 'nullable',
         ]);
@@ -95,13 +95,13 @@ class ComicController extends Controller
     {
 
         $validationResult = $request->validate([
-            'title' => 'required|max:64|min:1',
+            'title' => 'required|max:64',
             'description' => 'required|max:1000',
             'src' => 'nullable|url',
-            'price' => 'required|numeric|max=5000|min=10',
-            'series' => 'nullable|numeric|max=20|min=1',
-            'sale_date' => 'nullable|numeric|max=5000|min=10',
-            'type' => 'nullable|max=16|min:1',
+            'price' => 'required|numeric|max:5000',
+            'series' => 'nullable|numeric|max:20|min:1',
+            'sale_date' => 'nullable|numeric|max:5000|min:10',
+            'type' => 'nullable|max:16|min:1',
             'artists' => 'nullable',
             'writers' => 'nullable',
             ]);
