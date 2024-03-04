@@ -45,7 +45,7 @@ class ComicController extends Controller
 
         $validationResult = $request->validate([
             'title' => 'required|max:64',
-            'description' => 'required|max:1000',
+            'description' => 'nullable|max:1000',
             'src' => 'nullable|url',
             'price' => 'required|numeric|max:5000',
             'series' => 'nullable|numeric|max:20|min:1',
@@ -55,7 +55,7 @@ class ComicController extends Controller
             'writers' => 'nullable',
         ]);
 
-
+        dd($validationResult);
         // $newcomicData = $request->all();
         $comic = Comic::create($validationResult);
 
@@ -96,7 +96,7 @@ class ComicController extends Controller
 
         $validationResult = $request->validate([
             'title' => 'required|max:64',
-            'description' => 'required|max:1000',
+            'description' => 'nullable|max:1000',
             'src' => 'nullable|url',
             'price' => 'required|numeric|max:5000',
             'series' => 'nullable|numeric|max:20|min:1',

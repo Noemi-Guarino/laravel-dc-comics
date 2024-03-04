@@ -32,47 +32,47 @@
 
                 <div class="mb-3">
                     <label for="title" class="form-label">Title <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="title" name="title" placeholder="enter the title..." maxlength="64" required>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="enter the title..." maxlength="64" required value="{{ old ('title')}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="description" class="form-label">Descrizione</label>
-                    <textarea class="form-control" id="description" name="description" rows="3" placeholder="enter the description..."></textarea>
+                    <textarea class="form-control" id="description" name="description" rows="3" placeholder="enter the description..."></textarea value="{{ old ('description')}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="thumb" class="form-label">thumb</label>
-                    <input type="text" class="form-control" id="thumb" name="thumb" placeholder="Inserisci la SRC..." maxlength="1024">
+                    <input type="text" class="form-control" id="thumb" name="thumb" placeholder="Inserisci la SRC..." maxlength="1024" value="{{ old ('src')}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="price" class="form-label">Price <span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" id="price " name="price" placeholder="enter the price..." min="10" max="5000" required>
+                    <input type="number" class="form-control" id="price " name="price" placeholder="enter the price..." min="10" max="5000" required value="{{ old ('price')}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="sale_date" class="form-label">Sale date <span class="text-danger"></span></label>
-                    <input type="date" class="form-control" id="sale-date " name="sale_date" placeholder="enter the sale date..." min="10" max="5000" >
+                    <input type="date" class="form-control" id="sale-date " name="sale_date" placeholder="enter the sale date..." min="10" max="5000" value="{{ old ('sale_date')}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="type" class="form-label">Type <span class="text-danger"></span></label>
-                    <input type="text" class="form-control" id="type" name="type" placeholder="enter the type..." maxlength="16" >
+                    <input type="text" class="form-control" id="type" name="type" placeholder="enter the type..." maxlength="16" value="{{ old ('type')}}" >
                 </div>
 
                 <div class="mb-3">
                     <label for="series" class="form-label">Series</label>
-                    <input type="number" class="form-control" id="series" name="series" placeholder="enter the series" min="1" max="20">
+                    <input type="number" class="form-control" id="series" name="series" placeholder="enter the series" min="1" max="20" value="{{ old ('series')}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="artists" class="form-label">artists <span class="text-danger"></span></label>
-                    <input type="text" class="form-control" id="artists" name="artists" placeholder="enter the artists..." maxlength="16" >
+                    <input type="text" class="form-control" id="artists" name="artists" placeholder="enter the artists..." maxlength="16" value="{{ old ('artists')}}">
                 </div>
 
                 <div class="mb-3">
                     <label for="writers" class="form-label">writers <span class="text-danger"></span></label>
-                    <input type="text" class="form-control" id="writers" name="writers" placeholder="enter the writers..." maxlength="16" >
+                    <input type="text" class="form-control" id="writers" name="writers" placeholder="enter the writers..." maxlength="16" value="{{ old ('writers')}}">
                 </div>
 
                 <div>
