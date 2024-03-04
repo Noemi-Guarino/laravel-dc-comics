@@ -46,7 +46,7 @@ class ComicController extends Controller
         $validationResult = $request->validate([
             'title' => 'required|max:64',
             'description' => 'nullable|max:1000',
-            'src' => 'nullable|url',
+            'thumb' => 'nullable|url',
             'price' => 'required|numeric|max:5000',
             'series' => 'nullable|numeric|max:20|min:1',
             'sale_date' => 'nullable|max:5000|min:10',
@@ -97,7 +97,7 @@ class ComicController extends Controller
         $validationResult = $request->validate([
             'title' => 'required|max:64',
             'description' => 'nullable|max:1000',
-            'src' => 'nullable|url',
+            'thumb' => 'nullable|url',
             'price' => 'required|numeric|max:5000',
             'series' => 'nullable|numeric|max:20|min:1',
             'sale_date' => 'nullable|max:5000|min:10',
