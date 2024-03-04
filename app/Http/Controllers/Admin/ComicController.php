@@ -42,8 +42,23 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $newcomicData = $request->all();
-        $comic = Comic::create($newcomicData);
+
+        $validationResult = $request->validate([
+            'title' => 'required|max:64|min:1',
+            'description' => 'required|max:1000',
+            'src' => 'nullable|url',
+            'price' => 'required|numeric|max=5000|min=10',
+            'series' => 'nullable|numeric|max=20|min=1',
+            'sale_date' => 'nullable|numeric|max=5000|min=10',
+            'type' => 'nullable|max=16|min:1',
+            'artists' => 'nullable',
+            'writers' => 'nullable',
+        ]);
+
+
+        // $newcomicData = $request->all();
+        $comic = Comic::create($validationResult);
+
 
         // TODO: valido i dati, ma lo faremo in futuro
 
@@ -78,9 +93,21 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $newcomicData = $request->all();
-        $comic->update($newcomicData);
 
+        $validationResult = $request->validate([
+            'title' => 'required|max:64|min:1',
+            'description' => 'required|max:1000',
+            'src' => 'nullable|url',
+            'price' => 'required|numeric|max=5000|min=10',
+            'series' => 'nullable|numeric|max=20|min=1',
+            'sale_date' => 'nullable|numeric|max=5000|min=10',
+            'type' => 'nullable|max=16|min:1',
+            'artists' => 'nullable',
+            'writers' => 'nullable',
+            ]);
+    
+        // $newcomicData = $request->all();
+        $comic->update($validationResult);
 
         // $comic->title = $newcomicData['title'];
         // $comic->description = $newcomicData['description'];
